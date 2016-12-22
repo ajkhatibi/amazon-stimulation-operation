@@ -2,7 +2,7 @@
 1 verbose cli [ '/usr/local/Cellar/node/6.5.0/bin/node',
 1 verbose cli   '/usr/local/bin/npm',
 1 verbose cli   'install',
-1 verbose cli   'mysql',
+1 verbose cli   'inquirer',
 1 verbose cli   '--save' ]
 2 info using npm@3.10.3
 3 info using node@v6.5.0
@@ -26,7 +26,7 @@
 12 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:442:12)
 13 verbose cwd /Users/akbarkhatibi/bamazon
 14 error Darwin 16.1.0
-15 error argv "/usr/local/Cellar/node/6.5.0/bin/node" "/usr/local/bin/npm" "install" "mysql" "--save"
+15 error argv "/usr/local/Cellar/node/6.5.0/bin/node" "/usr/local/bin/npm" "install" "inquirer" "--save"
 16 error node v6.5.0
 17 error npm  v3.10.3
 18 error file /Users/akbarkhatibi/bamazon/package.json

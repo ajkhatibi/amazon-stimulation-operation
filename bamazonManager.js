@@ -103,14 +103,51 @@ var addInventory = function(){
 							var addInventory = answers.addInventory;
 							var addInventory2 = answers.addInventory2;
 
-							connection.query('SELECT * FROM products WHERE product_name=?', [addInventory], function(err, rows, fields) {
-							  if (err) throw err;
 							 
-							  console.log('The solution is: ', rows);
-							});
+							  console.log('couldnt get this to update sorry');
+							
+						})
+
+						connection.end(function(err){
+							if (err) throw err
+								mainSearch();
 						})
 			});
 			
+}
+
+var addNewInventory = function(){
+	var mysql = require('mysql');
+			var connection = mysql.createConnection({
+			  host     : 'localhost',
+			  user     : 'root',
+			  password : 'Khatibi1!2',
+			  database : 'bamazon'
+			});
+
+			connection.connect(function(err){
+				if (err) throw err
+					inquirer.prompt([
+							{
+								name: 'what_to_add',
+								message: 'What is the name of the item youd like to add',
+
+							},
+							{
+								name: 'what_to_add_quantity',
+								message: 'Type in the number of quantity youd like to add'
+							}
+						]).then(function(answers){
+							var what_to_add = answers.what_to_add;
+							var what_to_add_quantity = answers.what_to_add_quantity;
+
+							console.log('coudnt get this to work either')
+						})
+						connection.end(function(err){
+								if (err) throw err
+								mainSearch();
+						})
+			})
 }
 
 
